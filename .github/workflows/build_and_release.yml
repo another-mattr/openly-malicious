@@ -13,7 +13,7 @@ jobs:
     - name: Build & Sign
       run: |
         # Build the program
-        echo "echo 'HELLO WORLD 👋'" > program.sh
+        echo "echo 'Hello world 👋'" > program.sh
         # Sign the program
         echo "${{ secrets.private_signing_key }}" > private_key.pem
         openssl dgst -sha256 -sign private_key.pem -out signature.sig program.sh
